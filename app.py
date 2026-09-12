@@ -11,6 +11,7 @@ app = Flask(__name__)
 def ndvi_demo():
     return "Hello CI/CD!"
 
+@app.route("//ndvi")
 def calculate_ndvi():
     # ============================================================
     # 1. Simulierte Sentinel-2 Daten
