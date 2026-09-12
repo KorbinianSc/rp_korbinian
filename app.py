@@ -111,7 +111,7 @@ def ndvi_demp():
     print("\nTask Graph wird erstellt...")
 
     ndvi.data.visualize(
-        filename="ndvi_task_graph.png",
+        filename="/app/ndvi_task_graph",
         format="png",
         rankdir="TB"
     )
