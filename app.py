@@ -8,7 +8,10 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route("/")
-def ndvi_demp():
+def ndvi_demo():
+    return "Hello CI/CD!"
+
+def calculate_ndvi():
     # ============================================================
     # 1. Simulierte Sentinel-2 Daten
     # ============================================================
@@ -169,7 +172,7 @@ def ndvi_demp():
 
     # # plt.show()
 
-    return "Hello CI/CD!"
+    return f"<pre>{output}</pre>"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
