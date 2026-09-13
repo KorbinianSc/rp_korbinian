@@ -62,5 +62,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/korbiniansc/my-ci-cd-img:latest
-            ghcr.io/korbiniansc/my-ci-cd-img:<commit-sha>
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
