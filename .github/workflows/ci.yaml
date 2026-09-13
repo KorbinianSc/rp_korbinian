@@ -11,7 +11,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: korbiniansc/rp_korbinian
+  IMAGE_NAME: korbiniansc/my-ci-cd-img
 
 jobs:
 
@@ -62,5 +62,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+            ghcr.io/korbiniansc/my-ci-cd-img:latest
+            ghcr.io/korbiniansc/my-ci-cd-img:<commit-sha>
